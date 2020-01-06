@@ -6,7 +6,13 @@
 // Send transaction data with a pageview if available
 // when the page loads. Otherwise, use an event when the transaction
 // data becomes available.
-var dataLayer=[];  
+var dataLayer=[];
+  
+dataLayer.push({
+    'ecomm_prodid' : 'ABC123',
+    'ecomm_pagetype' : 'product',
+    'ecomm_totalvalue' : 49
+     }); 
 dataLayer.push({
   'ecommerce': {
     'purchase': {

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+ <head>
+ 
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T5N27K3');</script>
+<!-- End Google Tag Manager -->
+ 
+ </head>
+ 
+ <body>
+ 
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5N27K3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script>
+/**
+ * A function to handle a click on a checkout button. This function uses the eventCallback
+ * data layer variable to handle navigation after the ecommerce data has been sent to Google Analytics.
+ */
+function onCheckout() {
+  dataLayer.push({
+    'event': 'checkout',
+    'ecommerce': {
+      'checkout': {
+        'actionField': {'step': 1, 'option': 'Visa'},
+        'products': [{
+          'name': 'Test product',
+          'id': 'ABC123',
+          'price': '49',
+          'brand': 'Test',
+          'category': 'Clothing',
+          'variant': 'Gray',
+          'quantity': 1
+       }]
+     }
+   },
+   'eventCallback': function() {
+      document.location = 'checkout.html';
+   }
+  });
+}
+</script>
+
+<h1> This is a test page made to check ecomm event via GTM </h1>
+
+ </body>
+
+
+
+</html>

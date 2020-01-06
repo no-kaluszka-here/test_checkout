@@ -6,8 +6,8 @@
 // Send transaction data with a pageview if available
 // when the page loads. Otherwise, use an event when the transaction
 // data becomes available.
+var dataLayer=[];  
 dataLayer.push({
-  'event': 'checkout',
   'ecommerce': {
     'purchase': {
       'actionField': {

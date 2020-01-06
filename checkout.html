@@ -9,37 +9,8 @@ var dataLayer=[];
     'ecomm_pagetype' : 'product',
     'ecomm_totalvalue' : 49
      });
-</script>  
+</script> 
   
- <script>
-// Send transaction data with a pageview if available
-// when the page loads. Otherwise, use an event when the transaction
-// data becomes available.
-dataLayer.push({
-  'event': 'purchase',
-  'ecommerce': {
-    'purchase': {
-      'actionField': {
-        'id': '1111',                         // Transaction ID. Required for purchases and refunds.
-        'affiliation': 'Online Store',
-        'revenue': '44',                     // Total transaction value (incl. tax and shipping)
-        'tax':'5',
-        'shipping': '5.99',
-        'coupon': 'SUMMER_SALE'
-      },
-      'products': [{                            // List of productFieldObjects.
-        'name': 'Test product',     // Name or ID is required.
-        'id': 'ABC123',
-        'price': '49',
-        'brand': 'Test',
-        'category': 'Clothing',
-        'variant': 'Gray'
-        'quantity': 1,                           // Optional fields may be omitted or set to empty string.
-       }]
-    }
-  }
-});
-</script>
  
  <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -58,7 +29,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-
+ <script>
+dataLayer.push({
+  'event': 'purchase',
+  'ecommerce': {
+    'purchase': {
+      'actionField': {
+        'id': '1111',                         
+        'affiliation': 'Online Store',
+        'revenue': '44',                     
+        'tax':'5',
+        'shipping': '5.99',
+        'coupon': 'SUMMER_SALE'
+      },
+      'products': [{                            
+        'name': 'Test product',   
+        'id': 'ABC123',
+        'price': '49',
+        'brand': 'Test',
+        'category': 'Clothing',
+        'variant': 'Gray'
+        'quantity': 1,               
+       }]
+    }
+  }
+});
+</script>
+  
 <h1> This is a test page made to check ecomm event via GTM </h1>
 
  </body>
